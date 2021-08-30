@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Route } from 'wouter'
+
+import Images from './pages/Images'
+import ImageAdd from './pages/ImageAdd'
+import PublicationView from './pages/PublicationView'
+
+import Nav from './components/Nav'
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '.'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+
+      <Route path="/" component={Images} exact/>
+      <Route path="/load" component={ImageAdd} exact/>
+      <Route path="/publication/:id" component={PublicationView} />
     </div>
   );
 }

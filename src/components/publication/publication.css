@@ -1,0 +1,22 @@
+.image{
+    cursor: pointer;
+    position: relative;
+}
+
+.image:hover{
+    opacity: 0.8;
+}
+
+.icon-photo{
+    font-size: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.image:hover .icon-photo{
+    opacity: 1;
+    color: white;
+}
